@@ -45,3 +45,18 @@ function desencriptar(stringDesencriptada){
     }
     return stringDesencriptada
 }
+ 
+function btnCopiar() {
+    // Obtener el elemento textarea
+    var textarea = document.getElementById("msj2");
+
+    // Seleccionar el texto dentro del textarea
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+    // Copiar el texto al portapapeles
+    document.execCommand("copy");
+
+    // Mostrar un mensaje de éxito
+    alert("Texto copiado al portapapeles: " + textarea.value);
+}
